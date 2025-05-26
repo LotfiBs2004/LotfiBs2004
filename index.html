@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotfi's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for elements not easily styled with Tailwind */
+        :root {
+            --primary: #00ff00;
+            --secondary: #007700;
+            --bg-dark: #111111;
+            --bg-darker: #080808;
+            --text-light: #e0e0e0;
+            --text-lighter: #ffffff;
+        }
+        
+        body {
+            scroll-behavior: smooth;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Courier New', monospace;
+        }
+        
+        .typewriter {
+            overflow: hidden;
+            border-right: .15em solid var(--primary);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .15em;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--primary) }
+        }
+        
+        .tech-item {
+            transition: all 0.3s ease;
+        }
+        
+        .tech-item:hover {
+            color: var(--primary);
+            transform: translateX(5px);
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: var(--bg-darker);
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            cursor: pointer;
+            z-index: 99;
+            transition: all 0.3s;
+        }
+        
+        .back-to-top:hover {
+            background-color: var(--primary);
+            color: var(--bg-darker);
+        }
+        
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background-image: linear-gradient(to right, transparent, var(--primary), transparent);
+            margin: 3rem 0;
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+        
+        .glow-text {
+            text-shadow: 0 0 5px var(--primary);
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header Section -->
+    <header class="sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm border-b border-green-900">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold glow-text text-green-500">
+                <span class="typewriter">Lotfi's Portfolio</span>
+            </h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-green-500 transition-colors">About</a></li>
+                    <li><a href="#technologies" class="hover:text-green-500 transition-colors">Technologies</a></li>
+                    <li><a href="#socials" class="hover:text-green-500 transition-colors">Socials</a></li>
+                    <li><a href="#stack" class="hover:text-green-500 transition-colors">Tech Stack</a></li>
+                </ul>
+            </nav>
+            <button class="md:hidden text-green-500" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-black bg-opacity-95" id="mobile-menu">
+            <div class="container mx-auto px-4 py-2">
+                <ul class="flex flex-col space-y-3">
+                    <li><a href="#about" class="block py-2 hover:text-green-500 transition-colors">About</a></li>
+                    <li><a href="#technologies" class="block py-2 hover:text-green-500 transition-colors">Technologies</a></li>
+                    <li><a href="#socials" class="block py-2 hover:text-green-500 transition-colors">Socials</a></li>
+                    <li><a href="#stack" class="block py-2 hover:text-green-500 transition-colors">Tech Stack</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <!-- About Me Section -->
+        <section id="about" class="py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-green-500">About Me</h2>
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-green-900">
+                    <p class="mb-4"><span class="text-green-500">👋</span> Hi, I'm Lotfi!</p>
+                    <p class="mb-4"><span class="text-green-500">🔭</span> I'm a Software Engineer</p>
+                    <p class="mb-4"><span class="text-green-500">🌱</span> working with NestJS and Go</p>
+                    <p><span class="text-green-500">👯</span> I'm enthusiastic about cybersecurity, AI, and system design</p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Technologies & Interests Section -->
+        <section id="technologies" class="py-12">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-green-500">Technologies & Interests</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-green-900">
+                        <h3 class="text-xl font-semibold mb-4 text-green-400">Core Technologies</h3>
+                        <ul class="space-y-2">
+                            <li class="tech-item flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                NestJS
+                            </li>
+                            <li class="tech-item flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                Go
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-green-900">
+                        <h3 class="text-xl font-semibold mb-4 text-green-400">Interests</h3>
+                        <ul class="space-y-2">
+                            <li class="tech-item flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                Cybersecurity
+                            </li>
+                            <li class="tech-item flex items-center">
+                                <span class="w-2 h-2 bg-green-500 rounded-full mr-2"></span>
+                                AI
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+        <!-- Socials Section -->
+       <section id="socials" class="py-12">
+    <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6 text-green-500">Connect With Me</h2>
+        <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-green-900">
+            <div class="flex justify-center space-x-8">
+                <a href="https://www.instagram.com/loutfi_bs?igsh=MXFpczB1c2xjZzkybg==" class="social-icon text-3xl hover:text-green-500" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="www.linkedin.com/in/loutfi-belabbas-676185138" class="social-icon text-3xl hover:text-green-500" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:loutfi.belabbas@univ-alger.dz" class="social-icon text-3xl hover:text-green-500" aria-label="Gmail">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://wa.me/+213795648373" class="social-icon text-3xl hover:text-green-500" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <hr class="section-divider">
+
+        <!-- Tech Stack Section -->
+        <section id="stack" class="py-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl font-bold mb-6 text-green-500">Tech Stack</h2>
+                <div class="bg-black bg-opacity-50 p-6 rounded-lg border border-green-900">
+                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+                        <span class="tech-item">CSS3</span>
+                        <span class="tech-item">C</span>
+                        <span class="tech-item">Go</span>
+                        <span class="tech-item">JavaScript</span>
+                        <span class="tech-item">Python</span>
+                        <span class="tech-item">TypeScript</span>
+                        <span class="tech-item">LaTeX</span>
+                        <span class="tech-item">Heroku</span>
+                        <span class="tech-item">Netlify</span>
+                        <span class="tech-item">Firebase</span>
+                        <span class="tech-item">Bootstrap</span>
+                        <span class="tech-item">Chart.js</span>
+                        <span class="tech-item">Django</span>
+                        <span class="tech-item">Express.js</span>
+                        <span class="tech-item">Expo</span>
+                        <span class="tech-item">Electron.js</span>
+                        <span class="tech-item">Flask</span>
+                        <span class="tech-item">NestJS</span>
+                        <span class="tech-item">Next.js</span>
+                        <span class="tech-item">Node.js</span>
+                        <span class="tech-item">Nodemon</span>
+                        <span class="tech-item">React</span>
+                        <span class="tech-item">React Native</span>
+                        <span class="tech-item">Socket.io</span>
+                        <span class="tech-item">SASS</span>
+                        <span class="tech-item">TailwindCSS</span>
+                        <span class="tech-item">Apache</span>
+                        <span class="tech-item">Nginx</span>
+                        <span class="tech-item">MariaDB</span>
+                        <span class="tech-item">Figma</span>
+                        <span class="tech-item">Canva</span>
+                        <span class="tech-item">NumPy</span>
+                        <span class="tech-item">Pandas</span>
+                        <span class="tech-item">Git</span>
+                        <span class="tech-item">GitHub</span>
+                        <span class="tech-item">GitLab</span>
+                        <span class="tech-item">Postman</span>
+                        <span class="tech-item">Godot Engine</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black bg-opacity-90 py-6 border-t border-green-900">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-400">© <span id="year"></span> Lotfi's Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.style.display = 'block';
+            } else {
+                backToTopButton.style.display = 'none';
+            }
+$0
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
