@@ -1,5 +1,5 @@
 # 💫 About Me:
-# 👋 Hi, I’m Lotfi!<br><br>🔭 I’m a Software Engineer & Backend Engineer specializing   <br>🌱 working with nestJs and go <br>👯 I’m enthusiastic about cybersecurity, AI, and system design  <br>  <br><br>### 🔧 Technologies & Interests<br>![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs)  <br>![Go](https://img.shields.io/badge/Go-00ADD8?logo=go)  <br>![Cybersecurity](https://img.shields.io/badge/Cybersecurity-1E2A78?logo=cybersecurity)  <br>![AI](https://img.shields.io/badge/AI-000000?logo=artificial-intelligence)  <br><br> 
+# 👋 Hi, I’m Lotfi!<br><br>🔭 I’m a Software Engineer  <br>🌱 working with nestJs and go <br>👯 I’m enthusiastic about cybersecurity, AI, and system design  <br>  <br><br>### 🔧 Technologies & Interests<br>![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs)  <br>![Go](https://img.shields.io/badge/Go-00ADD8?logo=go)  <br>![Cybersecurity](https://img.shields.io/badge/Cybersecurity-1E2A78?logo=cybersecurity)  <br>![AI](https://img.shields.io/badge/AI-000000?logo=artificial-intelligence)  <br><br> 
 
 
 ## 🌐 Socials:
