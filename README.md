@@ -1,7 +1,7 @@
 # Hi, I'm Lotfi 👋
 
 **Backend & Security Engineer — building real systems, then trying to break them.**
-M2 Networks & Embedded Systems · Co-founder @ [DzDeve](https://dzdeve.com) · eJPT → OSCP in progress
+M2 Networks & Embedded Systems · Co-founder @ [DzDeve](https://dzdeve.com) · sec + and ccna in progress
 
 ---
 
