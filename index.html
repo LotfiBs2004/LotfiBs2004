@@ -4,10 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lotfi | Developer × Cybersecurity | Build. Break. Learn. Share.</title>
-<meta name="description" content="Lotfi, an Algerian software developer and network &amp; embedded systems engineering student moving into cybersecurity. Building products, breaking systems in legal labs, and sharing the journey.">
+<meta name="description" content="Lotfi, an Algerian software developer and network &amp; embedded systems engineering student moving into cybersecurity. Building products, breaking systems in legal labs, and sharing the journey."> 
+<meta name="description" content="Lotfi Belabbas, web and software developer in Algeria learning cybersecurity. I build SaaS, backends and web apps (NestJS, Go) and share my journey."> 
+<meta name="description" content="Lotfi Belabbas, development web et applications web en Algérie , pentesting et sécurité informatique , reseaux =.">
 <meta name="author" content="Lotfi Belabbas">
 <meta name="theme-color" content="#0B0F0D">
-<!-- Add <link rel="canonical"> and og:url / og:image here once your final domain is live -->
+<link rel="canonical" href="https://lotfi-build.vercel.app/">
+<meta property="og:url" content="https://lotfi-build.vercel.app/">
+<meta property="og:image" content="https://lotfi-build.vercel.app/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://lotfi-build.vercel.app/og.png">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Lotfi | I build. I break. I learn. I share.">
 <meta property="og:description" content="Developer moving into cybersecurity. Building products, breaking systems, documenting the journey.">
@@ -15,9 +22,11 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F0D'/%3E%3Cpath d='M20 14v32h26' stroke='%2339FF88' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
+<link rel="preload" as="image" href="assets/image.webp" type="image/webp" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","name":"Lotfi Belabbas","alternateName":"Lotfi","jobTitle":"Software Developer","description":"Algerian software developer and network & embedded systems engineering student moving into cybersecurity.","alumniOf":{"@type":"CollegeOrUniversity","name":"Université d'Alger 1"},"nationality":"Algerian","knowsAbout":["Software development","Cybersecurity","Networking","Cloud","SaaS","NestJS","Go"],"sameAs":["https://www.linkedin.com/in/loutfi-belabbas-676185138","https://www.instagram.com/loutfi_bs"]}
+{"@context":"https://schema.org","@type":"Person","url":"https://lotfi-build.vercel.app/","name":"Lotfi Belabbas","alternateName":"Lotfi","jobTitle":"Software Developer","description":"Algerian software developer and network & embedded systems engineering student moving into cybersecurity.","alumniOf":{"@type":"CollegeOrUniversity","name":"Université d'Alger 1"},"nationality":"Algerian","knowsAbout":["Software development","Cybersecurity","Networking","Cloud","SaaS","NestJS","Go"],"sameAs":["https://www.linkedin.com/in/loutfi-belabbas-676185138","https://www.instagram.com/loutfi_bs"]}
 </script>
 <style>
 :root{--g:#39FF88;--bg:#0B0F0D;--bg2:#10261B;--tx:#F2F5F3;--mu:#78B894;--ln:rgba(120,184,148,.22)}
@@ -44,10 +53,10 @@ h2{font-size:clamp(28px,4vw,40px);letter-spacing:-.02em;line-height:1.15;margin-
 .sub{color:var(--mu);max-width:62ch;margin-bottom:34px}
 /* hero */
 .hero{padding-top:70px;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
-h1 span{display:block;color:var(--mu);transition:color .3s}h1 span.on{color:var(--g)}
+h1 span{display:block;color:var(--g);opacity:.5;transition:opacity .3s}h1 span.on{opacity:1}
 .pos{color:#cfd8d2;font-size:19px;max-width:50ch;margin:24px 0 28px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
-.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid var(--g);transition:box-shadow .2s,transform .2s;cursor:pointer;font-family:inherit;font-size:16px;color:var(--tx);background:none}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;font-weight:500;border:1px solid var(--g);transition:transform .2s;cursor:pointer;font-family:inherit;font-size:16px;color:var(--tx);background:none}
 .btn.p{background:var(--g);color:var(--bg)}.btn:hover{box-shadow:0 0 18px rgba(57,255,136,.3);transform:translateY(-2px)}
 .soc{display:flex;gap:18px;margin-top:26px;font-size:14px}.soc a{color:var(--mu);text-decoration:none}.soc a:hover{color:var(--g)}
 .pt{position:relative;max-width:440px;margin-inline:auto;width:100%}
@@ -127,7 +136,7 @@ footer{margin-top:70px;border-top:1px solid var(--ln);padding:26px 0;color:var(-
   <div class="pt">
     <div class="frame" id="fr">
       <div class="ph m">Add your portrait:<br>assets/image.png</div>
-      <img src="assets/image.png" alt="Portrait of Lotfi" fetchpriority="high" onerror="this.remove();document.querySelector('.ph').style.display='grid'">
+      <picture><source srcset="assets/image.png" ><img src="assets/image.png" alt="Lotfi, web developer and cybersecurity learner in Algeria" width="900" height="900" fetchpriority="high" decoding="async" onerror="this.remove();document.querySelector('.ph').style.display='grid'"></picture>
     </div>
     <div class="chip c1 m"><b>●</b> status: learning</div>
     <div class="chip c2 m">based in <b>Algiers, DZ</b></div>
@@ -137,8 +146,7 @@ footer{margin-top:70px;border-top:1px solid var(--ln);padding:26px 0;color:var(-
 
 <section id="work"><div class="w">
   <p class="lbl m">what I build</p><h2>Work</h2>
-  <p class="sub">Client work and products. Add screenshots, GitHub and live links in the data list at the bottom of the file.</p>
-  <div class="grid" id="projects"></div>
+   <div class="grid" id="projects"></div>
 </div></section>
 
 <section id="cyber"><div class="w">
@@ -214,7 +222,7 @@ const projects=[
 /* status: learning | practicing | completed | planned */
 const journey=[
  ["Cybersecurity fundamentals","learning","Core concepts, threats and defenses."],
- ["Security+","in progress","Certification preparation. Not yet taken."],
+ ["Security+","planned","Certification preparation. Not yet taken."],
  ["Linux and networking","practicing","Building on my networking degree and daily Linux use."],
  ["Web security","learning","How web apps break and how to secure them."],
  ["CTFs","learning","Practicing on legal platforms and challenges."],
