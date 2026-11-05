@@ -44,7 +44,7 @@ eJPT coursework this quarter → OSCP roadmap after. Documenting the actual proc
 ---
 
 ## Find Me
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loutfi-belabbas-676185138) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://instagram.com/loutfi_bs) [![Website](https://img.shields.io/badge/dzdeve.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dzdeve.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/loutfi-belabbas-676185138) [![Instagram](https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white)](https://www.instagram.com/lotfi.build?cplk=MTBqZ3F3eDBvM3d1NQ==) [![Website](https://img.shields.io/badge/dzdeve.com-000000?style=for-the-badge&logo=googlechrome&logoColor=white)](https://dzdeve.com)
 
 ---
 

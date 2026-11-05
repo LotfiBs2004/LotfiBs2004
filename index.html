@@ -25,7 +25,7 @@
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"></noscript>
 <link rel="preload" as="image" href="assets/image.webp" type="image/webp" fetchpriority="high">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Person","url":"https://lotfi-build.vercel.app/","name":"Lotfi Belabbas","alternateName":"Lotfi","jobTitle":"Software Developer","description":"Algerian software developer and network & embedded systems engineering student moving into cybersecurity.","alumniOf":{"@type":"CollegeOrUniversity","name":"Université d'Alger 1"},"nationality":"Algerian","knowsAbout":["Software development","Cybersecurity","Networking","Cloud","SaaS","NestJS","Go"],"sameAs":["https://www.linkedin.com/in/loutfi-belabbas-676185138","https://www.instagram.com/loutfi_bs"]}
+{"@context":"https://schema.org","@type":"Person","url":"https://lotfi-build.vercel.app/","name":"Lotfi Belabbas","alternateName":"Lotfi","jobTitle":"Software Developer","description":"Algerian software developer and network & embedded systems engineering student moving into cybersecurity.","alumniOf":{"@type":"CollegeOrUniversity","name":"Université d'Alger 1"},"nationality":"Algerian","knowsAbout":["Software development","Cybersecurity","Networking","Cloud","SaaS","NestJS","Go"],"sameAs":["https://www.linkedin.com/in/loutfi-belabbas-676185138","https://www.instagram.com/lotfi.build?cplk=MTBqZ3F3eDBvM3d1NQ=="]}
 </script>
 <style>
 :root{--g:#39FF88;--bg:#0B0F0D;--bg2:#10261B;--tx:#F2F5F3;--mu:#78B894;--ln:rgba(120,184,148,.22)}
@@ -130,7 +130,7 @@ footer{margin-top:70px;border-top:1px solid var(--ln);padding:26px 0;color:var(-
     <h1 id="h1"><span class="on">I build.</span><span>I break.</span><span>I learn.</span><span>I share.</span></h1>
     <p class="pos">Backend developer moving into cybersecurity: building products, breaking systems in legal labs, and documenting the journey. Also available for freelance work.</p>
     <div class="btns"><a class="btn p" href="#work">Explore my work</a><a class="btn" href="#content">Follow my journey</a></div>
-    <div class="soc m"><a href="https://www.instagram.com/loutfi_bs" rel="me noopener">instagram</a><a href="https://www.linkedin.com/in/loutfi-belabbas-676185138" rel="me noopener">linkedin</a><a href="mailto:loutfi.belabbas@univ-alger.dz">email</a></div>
+    <div class="soc m"><a href="https://www.instagram.com/lotfi.build?cplk=MTBqZ3F3eDBvM3d1NQ==" rel="me noopener">instagram</a><a href="https://www.linkedin.com/in/loutfi-belabbas-676185138" rel="me noopener">linkedin</a><a href="mailto:loutfi.belabbas@univ-alger.dz">email</a></div>
   </div>
   <div class="pt">
     <div class="frame" id="fr">
@@ -206,7 +206,7 @@ footer{margin-top:70px;border-top:1px solid var(--ln);padding:26px 0;color:var(-
     <a class="btn p" href="mailto:loutfi.belabbas@univ-alger.dz">Email me</a>
     <a class="btn" href="https://wa.me/213795648373" rel="noopener">WhatsApp</a>
     <a class="btn" href="https://www.linkedin.com/in/loutfi-belabbas-676185138" rel="me noopener">LinkedIn</a>
-    <a class="btn" href="https://www.instagram.com/loutfi_bs" rel="me noopener">Instagram</a>
+    <a class="btn" href="https://www.instagram.com/lotfi.build?cplk=MTBqZ3F3eDBvM3d1NQ==" rel="me noopener">Instagram</a>
   </div>
 </div></section>
 </main>
@@ -215,9 +215,9 @@ footer{margin-top:70px;border-top:1px solid var(--ln);padding:26px 0;color:var(-
 <script>
 /* ===== EDIT YOUR CONTENT HERE ===== */
 const projects=[
- {name:"DzDeve",cat:"Software agency · Founder",status:"Active",desc:"My software development agency. We design and build web, mobile and software products for clients.",tech:[],built:["Founded and run the agency","Deliver client projects from idea to deployment"],github:"",demo:"",img:""},
- {name:"Travel Agency ERP",cat:"SaaS product",status:"In development",desc:"A platform that helps travel agencies manage bookings and daily operations in one place.",tech:["NestJS","TypeORM","MySQL"],built:["Grew an existing booking system into a modular ERP","Planned a phased product roadmap"],github:"",demo:"",img:""},
- {name:"STAFFPRO",cat:"SaaS · HR · GPS",status:"In progress",desc:"Staff attendance and GPS tracking so companies can manage HR and field teams from one dashboard.",tech:[],built:["Defining the MVP scope and features"],github:"",demo:"",img:""}
+ {name:"DzDeve",cat:"Software agency · Founder",status:"Active",desc:"My software development agency. We design and build web, mobile and software products for clients.",tech:[],built:["Founded and run the agency","Deliver client projects from idea to deployment"],github:"",demo:""},
+ {name:"Triply",cat:"SaaS product",status:"Completed",desc:"A travel agency platform that helps teams manage bookings and daily operations in one place.",tech:["NestJS","TypeORM","MySQL"],built:["Built the booking and operations dashboard","Shipped CRM, leads and supplier workflows"],github:"",demo:""},
+ {name:"STAFFPRO",cat:"SaaS · HR · GPS",status:"In progress",desc:"Staff attendance and GPS tracking so companies can manage HR and field teams from one dashboard.",tech:[],built:["Defining the MVP scope and features"],github:"",demo:""}
 ];
 /* status: learning | practicing | completed | planned */
 const journey=[
@@ -235,10 +235,10 @@ const posts=[];
 const stack={Backend:["NestJS","Go","Node.js","Express","Django"],Frontend:["React","Next.js","React Native","Expo","TailwindCSS"],Languages:["TypeScript","JavaScript","Python","Go","C"],Infrastructure:["Docker","Nginx","Apache","Linux (Red Hat)","Git","GitHub","GitLab"],Databases:["MySQL","MariaDB"]};
 /* ===== RENDER ===== */
 const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-$('projects').innerHTML=projects.map(p=>`<article class="card rv"><div class="shot m">${p.img?`<img src="${esc(p.img)}" alt="${esc(p.name)} screenshot" loading="lazy">`:esc(p.name[0])}</div><div class="cb"><div class="meta m"><span>${esc(p.cat)}</span><span class="st">● ${esc(p.status)}</span></div><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${p.tech.length?`<div class="tags m">${p.tech.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}<details><summary class="m">What I built</summary><ul>${p.built.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></details><div class="links m">${p.github?`<a href="${esc(p.github)}" rel="noopener">GitHub</a>`:''}${p.demo?`<a href="${esc(p.demo)}" rel="noopener">Live demo</a>`:''}</div></div></article>`).join('');
+$('projects').innerHTML=projects.map(p=>`<article class="card rv"><div class="cb"><div class="meta m"><span>${esc(p.cat)}</span><span class="st">● ${esc(p.status)}</span></div><h3>${esc(p.name)}</h3><p>${esc(p.desc)}</p>${p.tech.length?`<div class="tags m">${p.tech.map(t=>`<span>${esc(t)}</span>`).join('')}</div>`:''}<details><summary class="m">What I built</summary><ul>${p.built.map(b=>`<li>${esc(b)}</li>`).join('')}</ul></details><div class="links m">${p.github?`<a href="${esc(p.github)}" rel="noopener">GitHub</a>`:''}${p.demo?`<a href="${esc(p.demo)}" rel="noopener">Live demo</a>`:''}</div></div></article>`).join('');
 $('path').innerHTML=journey.map(j=>`<div class="step ${j[1]} rv"><i></i><h3>${esc(j[0])}<small class="m">${j[1]}</small></h3><p>${esc(j[2])}</p></div>`).join('');
 $('nowgrid').innerHTML=now.map(n=>`<div class="card rv"><div class="cb"><span class="m lbl" style="margin:0">${n[0]}</span><h3>${n[1]}</h3><p>${n[2]}</p></div></div>`).join('');
-$('posts').innerHTML=posts.length?posts.map(p=>`<a class="card rv" href="${esc(p.link)}" rel="noopener" style="text-decoration:none"><div class="shot m">${p.thumb?`<img src="${esc(p.thumb)}" alt="" loading="lazy">`:'▶'}</div><div class="cb"><div class="meta m"><span>${esc(p.platform)}</span><span>${esc(p.date)}</span></div><h3>${esc(p.title)}</h3><span class="m st" style="font-size:12.5px">${esc(p.category)}</span></div></a>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>First posts are on the way</b>Follow on <a href="https://www.instagram.com/loutfi_bs" rel="noopener" style="color:var(--g)">Instagram</a> to catch them when they land. They will appear here automatically.</div>`;
+$('posts').innerHTML=posts.length?posts.map(p=>`<a class="card rv" href="${esc(p.link)}" rel="noopener" style="text-decoration:none"><div class="shot m">${p.thumb?`<img src="${esc(p.thumb)}" alt="" loading="lazy">`:'▶'}</div><div class="cb"><div class="meta m"><span>${esc(p.platform)}</span><span>${esc(p.date)}</span></div><h3>${esc(p.title)}</h3><span class="m st" style="font-size:12.5px">${esc(p.category)}</span></div></a>`).join(''):`<div class="empty" style="grid-column:1/-1"><b>First posts are on the way</b>Follow on <a href="https://www.instagram.com/lotfi.build?cplk=MTBqZ3F3eDBvM3d1NQ==" rel="noopener" style="color:var(--g)">Instagram</a> to catch them when they land. They will appear here automatically.</div>`;
 $('stk').innerHTML=Object.entries(stack).map(([k,v])=>`<div class="rv"><h3 class="m">${k}</h3><div class="chips">${v.map(t=>`<span>${esc(t)}</span>`).join('')}</div></div>`).join('');
 $('y').textContent=new Date().getFullYear();
 /* ===== BEHAVIOR ===== */
