@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lotfi-build.vercel.app/</loc></url>
+  <url><loc>https://lotfi-build.vercel.app/articles/</loc></url>
+  <url><loc>https://lotfi-build.vercel.app/articles/ai-powered-cyberattacks.html</loc></url>
+  <url><loc>https://lotfi-build.vercel.app/articles/web-security-for-backend-developers/</loc></url>
+  <url><loc>https://lotfi-build.vercel.app/articles/secure-nestjs-api-checklist/</loc></url>
+  <url><loc>https://lotfi-build.vercel.app/articles/learning-security-as-a-developer/</loc></url>
 </urlset>

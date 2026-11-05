@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A security checklist for a new NestJS API | Lotfi</title>
+<meta name="description" content="The defensive defaults to put in place before a NestJS API serves its first real user.">
+<meta name="author" content="Lotfi Belabbas"><meta name="theme-color" content="#0B100E">
+<link rel="canonical" href="https://lotfi-build.vercel.app/articles/secure-nestjs-api-checklist/">
+<meta property="og:type" content="article"><meta property="og:url" content="https://lotfi-build.vercel.app/articles/secure-nestjs-api-checklist/"><meta property="og:title" content="A security checklist for a new NestJS API"><meta property="og:description" content="The defensive defaults to put in place before a NestJS API serves its first real user."><meta property="og:image" content="https://lotfi-build.vercel.app/og.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="A security checklist for a new NestJS API"><meta name="twitter:description" content="The defensive defaults to put in place before a NestJS API serves its first real user."><meta name="twitter:image" content="https://lotfi-build.vercel.app/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F0D'/%3E%3Cpath d='M20 14v32h26' stroke='%23B7FF35' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"><link rel="stylesheet" href="../styles.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"A security checklist for a new NestJS API","description":"The defensive defaults to put in place before a NestJS API serves its first real user.","datePublished":"2026-11-05","dateModified":"2026-11-05","author":{"@type":"Person","name":"Lotfi Belabbas","url":"https://lotfi-build.vercel.app/#about"},"image":"https://lotfi-build.vercel.app/og.png","mainEntityOfPage":"https://lotfi-build.vercel.app/articles/secure-nestjs-api-checklist/"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://lotfi-build.vercel.app/"},{"@type":"ListItem","position":2,"name":"Articles","item":"https://lotfi-build.vercel.app/articles/"},{"@type":"ListItem","position":3,"name":"A security checklist for a new NestJS API","item":"https://lotfi-build.vercel.app/articles/secure-nestjs-api-checklist/"}]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner"><a class="signature" href="../../" aria-label="Lotfi home">LOTFi /</a><nav class="site-nav mono" aria-label="Main navigation"><a href="../../">Home</a><a href="../" aria-current="page">Articles</a><a href="../../#about">About</a></nav></div></header>
+<main id="main" class="article-main"><div class="wrap">
+  <header class="article-header">
+    <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../../">Home</a><span>/</span><a href="../">Articles</a><span>/</span><span aria-current="page">A security checklist for a new NestJS API</span></nav>
+    <div class="article-meta"><span class="card-category">Development</span><time datetime="2026-11-05">05 Nov 2026</time><span>7 min read</span><span>By Lotfi Belabbas</span></div>
+    <h1>A security checklist for a new NestJS API</h1>
+    <p class="lede">The small set of defensive defaults I want in place before an API serves its first real user.</p>
+  </header>
+  <figure><img class="cover" src="../../og.png" alt="Dark green Lotfi developer and cybersecurity title graphic" width="1200" height="630" loading="eager" decoding="async"><figcaption>A security review starts with clear boundaries and deliberate defaults.</figcaption></figure>
+  <article class="article-body">
+    <nav class="toc" aria-labelledby="toc-title"><h2 id="toc-title">In this article</h2><ol><li><a href="#validate">Validate request shape</a></li><li><a href="#authorize">Make authorization explicit</a></li><li><a href="#surfaces">Protect operational surfaces</a></li><li><a href="#tests">Test negative paths</a></li></ol></nav>
+    <p>A framework gives an API structure, not a security guarantee. Before shipping a NestJS service, I want its boundaries, defaults and failure modes to be deliberate.</p>
+    <h2 id="validate">1. Validate the shape of every request</h2>
+    <p>Use DTOs and a global validation pipe with transformation disabled unless you need it deliberately. Reject unknown properties rather than silently accepting fields the endpoint never intended to handle.</p>
+    <pre><code>new ValidationPipe({
+  whitelist: true,
+  forbidNonWhitelisted: true,
+  transform: false
+})</code></pre>
+    <h3>Why allowlists matter</h3>
+    <p>An allowlist makes the accepted contract visible. It also prevents a new client field from quietly reaching business logic before the endpoint has decided what that field means.</p>
+    <h2 id="authorize">2. Make authorization explicit</h2>
+    <p>Authentication guards answer “who are you?” Authorization answers “may you perform this action on this resource?” Keep both questions visible in the route or service, and verify ownership or role permissions before returning records.</p>
+    <blockquote>Authentication identifies the caller; authorization limits the caller’s power.</blockquote>
+    <h2 id="surfaces">3. Protect operational surfaces</h2>
+    <ul><li>Set safe HTTP headers with Helmet.</li><li>Configure CORS for known origins instead of allowing every origin by default.</li><li>Rate-limit login, password reset and other expensive or sensitive endpoints.</li><li>Keep secrets in environment configuration and out of logs.</li></ul>
+    <h2 id="fail">4. Fail without leaking</h2>
+    <p>Clients need useful status codes, not stack traces or database details. Log enough context server-side to investigate a failure, while keeping tokens, passwords and personal data out of those logs.</p>
+    <h2 id="tests">5. Test the negative paths</h2>
+    <p>The useful tests are often the requests that should fail: an unknown field, a missing role, another user’s resource ID, an expired token and a request that exceeds the rate limit. A small negative-path suite catches regressions early.</p>
+  </article>
+  <section class="sources" aria-labelledby="sources-title"><h2 id="sources-title">Sources and references</h2><ol><li><a href="https://docs.nestjs.com/techniques/validation" rel="noopener">NestJS validation documentation</a></li><li><a href="https://owasp.org/www-project-api-security/" rel="noopener">OWASP API Security Top 10</a></li></ol></section>
+  <aside class="author-card" aria-labelledby="author-title"><h2 id="author-title">About the author</h2><p>Lotfi Belabbas is a backend developer and cybersecurity learner based in Algeria. He writes about building software, security and the systems behind both.</p></aside>
+  <section class="related" aria-labelledby="related-title"><h2 id="related-title">Related articles</h2><div class="related-grid"><a class="related-card" href="../web-security-for-backend-developers/"><small>Cybersecurity</small><strong>Web security for backend developers</strong></a><a class="related-card" href="../learning-security-as-a-developer/"><small>Learning</small><strong>Learning security as a developer</strong></a></div></section>
+  <a class="back-link" href="../">All articles</a>
+</div></main>
+<footer class="site-footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Lotfi Belabbas.</span><a class="mono" href="../../">Back to portfolio</a></div></footer>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>

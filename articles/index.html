@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Articles | Lotfi — Development &amp; Cybersecurity</title>
+<meta name="description" content="Notes from Lotfi on cybersecurity, software development and technology.">
+<meta name="author" content="Lotfi Belabbas">
+<meta name="theme-color" content="#0B100E">
+<link rel="canonical" href="https://lotfi-build.vercel.app/articles/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lotfi-build.vercel.app/articles/">
+<meta property="og:title" content="Articles | Lotfi">
+<meta property="og:description" content="Notes from the digital world: cybersecurity, development and technology.">
+<meta property="og:image" content="https://lotfi-build.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B0F0D'/%3E%3Cpath d='M20 14v32h26' stroke='%23B7FF35' stroke-width='7' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header"><div class="wrap header-inner">
+  <a class="signature" href="../" aria-label="Lotfi home">LOTFi /</a>
+  <nav class="site-nav mono" aria-label="Main navigation">
+    <a href="../">Home</a><a href="./" aria-current="page">Articles</a><a href="../#about">About</a>
+  </nav>
+</div></header>
+<main id="main">
+  <section class="intro"><div class="wrap">
+    <p class="eyebrow mono">Field notes / 001</p>
+    <h1>Notes from the <span>digital world.</span></h1>
+    <p class="intro-copy">I share what I learn while building software, studying cybersecurity and trying to understand the systems underneath the interface.</p>
+  </div></section>
+  <section class="wrap" aria-labelledby="latest-heading">
+    <div class="section-bar">
+      <h2 id="latest-heading">Latest notes</h2>
+      <div class="filters" aria-label="Filter articles">
+        <button class="filter mono" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter mono" type="button" data-filter="cybersecurity" aria-pressed="false">Cybersecurity</button>
+        <button class="filter mono" type="button" data-filter="development" aria-pressed="false">Development</button>
+        <button class="filter mono" type="button" data-filter="learning" aria-pressed="false">Learning</button>
+      </div>
+    </div>
+    <div class="articles-grid" id="articles">
+      <a class="article-card" data-category="cybersecurity" href="web-security-for-backend-developers/">
+        <div class="card-meta"><span class="card-category">Cybersecurity</span><span>05 Nov 2026</span><span>6 min read</span></div>
+        <h3>Web security for backend developers: start with the request</h3>
+        <p>A practical mental model for tracing input through an API and finding the assumptions that become vulnerabilities.</p>
+        <span class="read-link">Read article</span>
+      </a>
+      <a class="article-card" data-category="cybersecurity" href="ai-powered-cyberattacks.html">
+        <div class="card-meta"><span class="card-category">Cybersecurity</span><span>13 Nov 2025</span><span>9 min read</span></div>
+        <h3>How Hackers Are Using AI to Scale Cyberattacks</h3>
+        <p>How AI can accelerate reconnaissance, research and social engineering, and what defenders can do about it.</p>
+        <span class="read-link">Read article</span>
+      </a>
+      <a class="article-card" data-category="development" href="secure-nestjs-api-checklist/">
+        <div class="card-meta"><span class="card-category">Development</span><span>05 Nov 2026</span><span>7 min read</span></div>
+        <h3>A security checklist for a new NestJS API</h3>
+        <p>The small set of defensive defaults I want in place before an API serves its first real user.</p>
+        <span class="read-link">Read article</span>
+      </a>
+      <a class="article-card" data-category="learning" href="learning-security-as-a-developer/">
+        <div class="card-meta"><span class="card-category">Learning</span><span>05 Nov 2026</span><span>5 min read</span></div>
+        <h3>Learning security as a developer</h3>
+        <p>Why building software is a useful starting point for understanding how systems fail and how to test them responsibly.</p>
+        <span class="read-link">Read article</span>
+      </a>
+    </div>
+    <p class="empty-state" id="empty">No notes in this category yet.</p>
+  </section>
+</main>
+<footer class="site-footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Lotfi Belabbas.</span><a class="mono" href="../">Back to portfolio</a></div></footer>
+<script>
+const cards = [...document.querySelectorAll(".article-card")];
+const empty = document.getElementById("empty");
+document.querySelectorAll("[data-filter]").forEach(button => button.addEventListener("click", () => {
+  const filter = button.dataset.filter;
+  document.querySelectorAll("[data-filter]").forEach(item => item.setAttribute("aria-pressed", item === button));
+  let visible = 0;
+  cards.forEach(card => {
+    const show = filter === "all" || card.dataset.category === filter;
+    card.hidden = !show;
+    if (show) visible++;
+  });
+  empty.style.display = visible ? "none" : "block";
+}));
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
